@@ -51,6 +51,12 @@ class Config:
     def bench_sh(self) -> Path:
         return Path(self.edge_ai_root) / "bench.sh"
 
+    @property
+    def rag_app_root(self) -> Path:
+        # EDGE_AI_ROOT is <local-document-assistant>/serving; the app and its
+        # evals live one directory up.
+        return Path(self.edge_ai_root).parent if self.edge_ai_root else Path()
+
     def startup_problems(self) -> list[str]:
         problems: list[str] = []
         if not self.edge_ai_root:

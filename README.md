@@ -34,6 +34,7 @@ It ties together three standalone projects through config (paths + URLs), copyin
 | `compare_results` | Compare Q4 vs Q8 speed (llama-bench) + quality (perplexity) | `EDGE_AI_ROOT/results` |
 | `search_documents` | Semantic search over indexed docs | RAG `/search` |
 | `ask_documents` | Grounded answer with citations | RAG `/chat` |
+| `rag_eval` | Measured RAG evals: retrieval modes + quant × RAG quality (read-only) | RAG app `evals/results` |
 | `eval_perplexity` | Measure a GGUF's perplexity on a text file *(job)* | `bin/llama-perplexity` |
 | `quantize_model` | Quantize a GGUF to a lower precision *(job)* | `bin/llama-quantize` |
 | `run_benchmark` | llama-bench throughput on a local GGUF *(job)* | `bench.sh` |
